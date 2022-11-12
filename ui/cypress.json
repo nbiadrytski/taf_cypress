@@ -1,0 +1,20 @@
+{
+  "integrationFolder": "ui",
+  "fixturesFolder": "fixtures",
+  "pluginsFile": false,
+  "supportFile": "./_cypress/support/index.js",
+  "responseTimeout": 60000,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "chromeWebSecurity": false,
+  "video": false,
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "results/results-[hash].xml",
+    "toConsole": true
+  },
+  "watchForFileChanges": false,
+  "env": {
+    "URL": "https://site.staging.com"
+  }
+}

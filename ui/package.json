@@ -1,0 +1,19 @@
+{
+  "name": "cypress-tests",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean-results": "rm -rf results & rm -rf cypress/screenshots",
+    "cypress": "npx cypress open",
+    "all:run": "npx cypress run --browser=chrome",
+    "integration:run": "npx cypress run --spec 'ui/integration/*' || true",
+    "e2e:run-chrome": "npx cypress run --browser=chrome --spec ui/e2e/*",
+    "e2e:run": "npx cypress run --spec ui/e2e/* || true",
+    "merge-reports": "jrm results/combined.xml \"results/*.xml\""
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "cypress": "6.8.0",
+    "junit-report-merger": "3.0.1"
+  }
+}
